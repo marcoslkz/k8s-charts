@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: traefik
+  namespace: argocd
+spec:
+  destination:
+    namespace: traefik
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: traefik
+    helm:
+      parameters:
+      - name: globalArguments[0]
+        value: --global.checknewversion=false
+      - name: globalArguments[1]
+        value: --global.sendanonymoususage=false
+      - name: deployment.replicas
+        value: "3"
+      - name: ports.websecure.http3.enabled
+        value: "true"
+      - name: providers.kubernetesIngress.allowExternalNameServices
+        value: "true"
+      - name: providers.kubernetesCRD.allowExternalNameServices
+        value: "true"
+    repoURL: https://helm.traefik.io/traefik
+    targetRevision: 23.1.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
