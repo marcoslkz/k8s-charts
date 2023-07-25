@@ -1,0 +1,22 @@
+global:
+  image:
+    tags:
+      web-application: 7.6.1.327
+      web-scraper: 9.2.7.426
+
+
+quarkus:
+  build:
+    enabled: false
+  deploy:
+    route:
+      enabled: false
+    replicas: 2
+  image:
+    name: quay.io/redhatworkshops/gitops-helm-quarkus
+
+
+cert-manager:
+  dns01RecursiveNameserversOnly: "true"
+  dns01RecursiveNameservers: 1.1.1.1:53,9.9.9.9:53
+
