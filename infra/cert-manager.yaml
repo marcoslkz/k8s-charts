@@ -21,7 +21,7 @@ spec:
       - name: dns01RecursiveNameservers
         value: 1.1.1.1:53,9.9.9.9:53
     repoURL: https://charts.jetstack.io
-    targetRevision: v1.13.0-alpha.0
+    targetRevision: v1.12.0
   syncPolicy:
     automated:
       prune: true
