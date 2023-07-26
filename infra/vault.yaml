@@ -17,7 +17,7 @@ spec:
       - name: server.ha.enabled
         value: "true"
     repoURL: https://helm.releases.hashicorp.com
-    targetRevision: 1.14.0
+    targetRevision: 0.25.0
   syncPolicy:
     automated:
       prune: true
