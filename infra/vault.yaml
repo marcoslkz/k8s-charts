@@ -23,5 +23,5 @@ spec:
       prune: false
       selfHeal: false
     syncOptions:
-    - Validate=false
+    - ApplyOutOfSyncOnly=true
     - CreateNamespace=true
