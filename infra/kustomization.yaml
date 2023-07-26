@@ -6,7 +6,7 @@ resources:
   - argocd
   - storage.yaml
   - cert-manager.yaml
-  - vault.yml
+  - vault.yaml
   
 #patches:
 #  - path: patch.yaml
