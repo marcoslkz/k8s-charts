@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - argocd
   - storage.yaml
+  - cert-manager.yaml
   #- https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.yaml
   #- https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
   
