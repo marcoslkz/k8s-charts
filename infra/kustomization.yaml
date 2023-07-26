@@ -6,6 +6,7 @@ resources:
   - argocd
   - storage.yaml
   - cert-manager.yaml
+  - traefik.yaml
   #- vault.yaml
   
 #patches:
