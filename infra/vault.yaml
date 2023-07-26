@@ -23,4 +23,5 @@ spec:
       prune: false
       selfHeal: false
     syncOptions:
+    - RespectIgnoreDifferences=true
     - CreateNamespace=true
