@@ -14,7 +14,7 @@ spec:
       parameters:
       - name: server.affinity
         value: ""
-      - name: server.ha.enabled: 
+      - name: server.ha.enabled
         value: true
     repoURL: https://helm.releases.hashicorp.com
     targetRevision: HEAD
