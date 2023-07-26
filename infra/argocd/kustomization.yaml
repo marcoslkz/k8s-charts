@@ -4,6 +4,6 @@ resources:
   - install.yaml
   #- argocd-cmd-params-cm-patch.yml
   
-#patches:
-#  - path: patch.yaml
+patches:
+  - path: argocd-cmd-params-cm-patch.yml
 #    namePrefix: production-
