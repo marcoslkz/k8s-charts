@@ -12,7 +12,7 @@ spec:
     chart: traefik 
     helm:
       valueFiles:
-      - ../traefik-values.yaml
+      - https://raw.githubusercontent.com/marcoslkz/k8s-charts/main/infra/traefik-values.yaml
     repoURL:  https://traefik.github.io/charts
     targetRevision: 23.1.0
   syncPolicy:
