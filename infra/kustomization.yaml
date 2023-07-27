@@ -9,7 +9,7 @@ resources:
   - traefik.yaml
   #- vault.yaml
   
-#patches:
-#  - path: patch.yaml
+patches:
+  - path: traefik-values.yaml
 #    namePrefix: production-
 
