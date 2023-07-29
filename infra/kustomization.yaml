@@ -7,7 +7,7 @@ resources:
   - storage.yaml
   - cert-manager.yaml
   - traefik.yaml
-  #- vault.yaml
+  - vault.yaml
   
 #patches:
 #  - path: path.yaml
