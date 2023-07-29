@@ -4,9 +4,6 @@ metadata:
   name: vault
   namespace: argocd
 spec:
-  destination:
-    namespace: vault
-    server: https://kubernetes.default.svc
   project: default
   source:
     chart: vault
@@ -23,9 +20,13 @@ spec:
     repoURL: https://helm.releases.hashicorp.com
     targetRevision: 0.25.0
   syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
     syncOptions:
-    - ApplyOutOfSyncOnly=true
     - CreateNamespace=true
+  destination:
+    namespace: vault
+    server: https://kubernetes.default.svc
+  ignoreDifferences:
+  - group: admissionregistration.k8s.io
+    kind: MutatingWebhookConfiguration
+    jqPathExpressions:
+    - .webhooks[]?.clientConfig.caBundle
