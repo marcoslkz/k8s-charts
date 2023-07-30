@@ -16,7 +16,9 @@ spec:
     path: deploy/chart/local-path-provisioner
     repoURL: https://github.com/rancher/local-path-provisioner
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: 
+     automated: 
+       prune: true 
+       selfHeal: true 
+     syncOptions: 
+     - CreateNamespace=true
