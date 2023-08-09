@@ -20,7 +20,8 @@ spec:
         - name: argocd-server
           port: 443
           scheme: h2c
-  tls:
-    certResolver: portal-tls 
+  
+  tls: {}
+    #certResolver: portal-tls 
 
     
