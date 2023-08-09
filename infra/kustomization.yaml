@@ -8,6 +8,9 @@ resources:
   - cert-manager.yaml
   - traefik.yaml
   - external.yaml
+  - cert-manager.yaml
+  - certificate.yaml
+  - cert-prod.yaml
   
 #patches:
 #  - path: path.yaml

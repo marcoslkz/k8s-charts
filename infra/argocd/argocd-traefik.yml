@@ -8,17 +8,17 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`${SITE_URL}`)
+      match: Host(`cloudomega.sytes.net`)
       priority: 10
       services:
         - name: argocd-server
           port: 80
     - kind: Rule
-      match: Host(`${SITE_URL}`) && Headers(`Content-Type`, `application/grpc`)
+      match: Host(`cloudomega.sytes.net`) && Headers(`Content-Type`, `application/grpc`)
       priority: 11
       services:
         - name: argocd-server
           port: 80
           scheme: h2c
   tls:
-    certResolver: default
+    certResolver: portal-tls 

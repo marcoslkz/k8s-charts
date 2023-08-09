@@ -6,4 +6,5 @@ resources:
   
 patches:
   - path: argocd-cmd-params-cm-patch.yml
+  - path: argocd-traefik.yml
 #    namePrefix: production-
