@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: cert-manager
-  namespace: argocd
+  namespace: cert-manager 
 spec:
   destination:
     namespace: cert-manager
@@ -13,7 +13,7 @@ spec:
     helm:
       parameters:
       - name: installCRDs
-        value: "false"
+        value: "true"
       - name: replicaCount
         value: "3"
       - name: dns01RecursiveNameserversOnly
