@@ -13,7 +13,7 @@ spec:
     helm:
       parameters:
       - name: installCRDs
-        value: "true"
+        value: "false"
       - name: replicaCount
         value: "3"
       - name: dns01RecursiveNameserversOnly
