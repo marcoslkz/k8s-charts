@@ -7,11 +7,11 @@ resources:
   - cert-manager.yaml
   - https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml
   - https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
-  - traefik.yaml
   - external.yaml
   - cert-manager.yaml
   - certificate.yaml
   - cert-prod.yaml
+    #- traefik.yaml
   
 #patches:
 #  - path: path.yaml
